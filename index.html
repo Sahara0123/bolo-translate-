@@ -4,10 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bolo Translate - Smart Translator</title>
+    <title>Bolo Translate</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Bolo Translate</h1>
-    <p>This is the updated version of your translator website with the new name.</p>
+    <div class="container">
+        <h1>Bolo Translate</h1>
+        <p>Translate between multiple Indian languages.</p>
+        <textarea id="inputText" placeholder="Enter text here..."></textarea>
+        <select id="languageSelect">
+            <option value="hi">Hindi</option>
+            <option value="en">English</option>
+            <option value="bn">Bengali</option>
+            <option value="ta">Tamil</option>
+        </select>
+        <button onclick="translateText()">Translate</button>
+        <div id="outputText"></div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
