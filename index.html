@@ -1,17 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Bolo Translate - Free online voice translator supporting English, Hindi, Bengali, Tamil, and all major Indian languages.">
-  <meta name="keywords" content="Free translator, Hindi to English, English to Tamil, Voice translation, Bolo Translate, Online translator">
+  <meta name="description" content="Bolo Translate - Smart voice and text translator for all Indian and global languages.">
+  <meta name="keywords" content="Google Translate alternative, Bolo Translate, voice translator, Indian language translator">
   <meta name="robots" content="index, follow">
-  <meta name="author" content="Bolo Translate">
-  <meta property="og:title" content="Bolo Translate">
-  <meta property="og:description" content="Use Bolo Translate for quick, accurate voice-based translations between Indian and global languages.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://worldtranslation.netlify.app/">
-  <meta property="og:image" content="logo.png">
   <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE_HERE" />
   <title>Bolo Translate</title>
   <link rel="stylesheet" href="style.css" />
@@ -20,27 +15,40 @@
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Bolo Translate Logo" class="logo" />
+    <img src="logo.png" alt="Bolo Translate" class="logo"/>
     <h1>Bolo Translate</h1>
+    <p class="tagline">Speak. Type. Translate. Instantly.</p>
   </header>
+
   <main>
-    <section class="translator">
-      <div class="lang-box">
+    <div class="translator-container">
+      <div class="translator-box">
         <select id="fromLang"></select>
-        <textarea id="inputText" placeholder="Enter text here..."></textarea>
+        <textarea id="inputText" placeholder="Type or speak something..."></textarea>
         <button onclick="startVoiceInput()">🎙️</button>
       </div>
-      <div class="switch">⇆</div>
-      <div class="lang-box">
+
+      <div class="switch-btn" onclick="switchLanguages()">⇄</div>
+
+      <div class="translator-box">
         <select id="toLang"></select>
-        <textarea id="outputText" placeholder="Translation will appear here..." readonly></textarea>
-        <button onclick="speakText()">🔈</button>
+        <textarea id="outputText" readonly placeholder="Translation will appear here..."></textarea>
+        <button onclick="speakText()">🔊</button>
       </div>
-    </section>
-    <div class="ads">Ad Placeholder</div>
+    </div>
+
+    <div class="illustration">
+      <img src="translate-banner.png" alt="Illustration" />
+    </div>
+
+    <div class="ads">
+      <!-- AdSense Placeholder -->
+      <p>Ad goes here</p>
+    </div>
   </main>
+
   <footer>
-    <p>&copy; 2025 Bolo Translate | <a href="#">Privacy Policy</a> | <a href="#">Terms</a></p>
+    <p>&copy; 2025 Bolo Translate. All rights reserved.</p>
   </footer>
 </body>
 </html>

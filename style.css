@@ -1,62 +1,81 @@
+
 body {
-  font-family: Arial, sans-serif;
-  background: #f2f2f2;
   margin: 0;
-  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: #ffffff;
 }
 header {
-  background: #1976d2;
-  color: white;
+  background: #1f1f1f;
+  padding: 20px;
   text-align: center;
-  padding: 1em;
 }
-.logo {
-  height: 50px;
-  vertical-align: middle;
+header .logo {
+  width: 60px;
 }
-.translator {
+h1 {
+  margin: 10px 0;
+  font-size: 28px;
+}
+.tagline {
+  color: #bbbbbb;
+}
+.translator-container {
   display: flex;
   justify-content: center;
-  align-items: stretch;
-  padding: 20px;
+  align-items: start;
   gap: 10px;
+  padding: 30px;
   flex-wrap: wrap;
 }
-.lang-box {
-  flex: 1 1 300px;
-  background: white;
-  border-radius: 8px;
-  padding: 10px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
+.translator-box {
+  background: #1e1e1e;
+  border-radius: 12px;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 textarea {
+  width: 100%;
+  height: 120px;
   margin-top: 10px;
-  height: 100px;
-  resize: vertical;
+  background: #2a2a2a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
 }
 select, button {
-  padding: 6px;
-  margin-top: 5px;
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  background: #3a3a3a;
+  color: white;
 }
-.switch {
-  align-self: center;
-  font-size: 2em;
+.switch-btn {
+  font-size: 30px;
+  margin: 20px;
+  cursor: pointer;
+}
+.illustration {
+  text-align: center;
+  margin: 20px;
+}
+.illustration img {
+  width: 90%;
+  max-width: 500px;
 }
 .ads {
-  margin: 20px auto;
-  max-width: 600px;
-  height: 90px;
-  background: #ddd;
+  margin: 20px;
   text-align: center;
-  line-height: 90px;
-  font-weight: bold;
+  color: #aaaaaa;
 }
 footer {
-  background: #1976d2;
-  color: white;
   text-align: center;
-  padding: 1em;
-  margin-top: 30px;
+  padding: 15px;
+  background: #1f1f1f;
+  color: #999999;
 }
