@@ -1,94 +1,37 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bolo Translate</title>
-    <style>
-        body {
-            background: linear-gradient(to right, #f4f4f4, #e8f0ff);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #222;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .container {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            width: 90%;
-            max-width: 600px;
-            text-align: center;
-        }
-        textarea, select, button {
-            width: 100%;
-            margin-top: 1rem;
-            padding: 0.75rem;
-            font-size: 1rem;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-        }
-        button {
-            background-color: #28a745;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #218838;
-        }
-        .footer {
-            margin-top: 2rem;
-            font-size: 0.9rem;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Bolo Translate - A powerful multilingual translation tool with voice input and more."/>
+  <title>Bolo Translate</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Bolo Translate 🌍</h1>
-        <p>Translate anything into any language – accurately and fast.</p>
-        <textarea id="inputText" rows="4" placeholder="Enter text to translate..."></textarea>
-        <select id="languageSelect">
-            <option value="hi">Hindi</option>
-            <option value="es">Spanish</option>
-            <option value="fr">French</option>
-            <option value="de">German</option>
-            <option value="zh">Chinese</option>
-            <option value="ar">Arabic</option>
-            <option value="ru">Russian</option>
-            <option value="ja">Japanese</option>
-            <option value="pa">Punjabi</option>
-            <option value="bn">Bengali</option>
-            <option value="mr">Marathi</option>
-            <option value="ta">Tamil</option>
-            <option value="te">Telugu</option>
-            <option value="ur">Urdu</option>
-        </select>
-        <button onclick="translateText()">Translate</button>
-        <p id="outputText" style="margin-top:1rem;"></p>
-        <div class="footer">Powered by Google Translate API | <a href="#">Donate</a></div>
-    </div>
-    <script>
-        async function translateText() {
-            const text = document.getElementById('inputText').value;
-            const lang = document.getElementById('languageSelect').value;
-            const output = document.getElementById('outputText');
-            output.innerText = "Translating...";
-
-            try {
-                const res = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${lang}&dt=t&q=${encodeURI(text)}`);
-                const data = await res.json();
-                output.innerText = data[0][0][0];
-            } catch (err) {
-                output.innerText = "Translation failed. Try again.";
-            }
-        }
-    </script>
+  <header>
+    <img src="logo.png" alt="Bolo Translate Logo" class="logo" />
+    <h1>Bolo Translate</h1>
+  </header>
+  <main>
+    <section class="translator">
+      <div class="lang-box">
+        <select id="fromLang"></select>
+        <textarea id="inputText" placeholder="Enter text here..."></textarea>
+        <button onclick="startVoiceInput()">🎤</button>
+      </div>
+      <div class="switch">⇆</div>
+      <div class="lang-box">
+        <select id="toLang"></select>
+        <textarea id="outputText" placeholder="Translation will appear here..." readonly></textarea>
+        <button onclick="speakText()">🔊</button>
+      </div>
+    </section>
+    <div class="ads">Ad Placeholder</div>
+  </main>
+  <footer>
+    <p>&copy; 2025 Bolo Translate | <a href="#">Privacy Policy</a> | <a href="#">Terms</a></p>
+  </footer>
 </body>
 </html>
