@@ -1,54 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Bolo Translate - Smart voice and text translator for all Indian and global languages.">
-  <meta name="keywords" content="Google Translate alternative, Bolo Translate, voice translator, Indian language translator">
-  <meta name="robots" content="index, follow">
-  <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE_HERE" />
-  <title>Bolo Translate</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="script.js" defer></script>
-</head>
-<body>
-  <header>
-    <img src="logo.png" alt="Bolo Translate" class="logo"/>
-    <h1>Bolo Translate</h1>
-    <p class="tagline">Speak. Type. Translate. Instantly.</p>
-  </header>
-
-  <main>
-    <div class="translator-container">
-      <div class="translator-box">
-        <select id="fromLang"></select>
-        <textarea id="inputText" placeholder="Type or speak something..."></textarea>
-        <button onclick="startVoiceInput()">🎙️</button>
-      </div>
-
-      <div class="switch-btn" onclick="switchLanguages()">⇄</div>
-
-      <div class="translator-box">
-        <select id="toLang"></select>
-        <textarea id="outputText" readonly placeholder="Translation will appear here..."></textarea>
-        <button onclick="speakText()">🔊</button>
-      </div>
-    </div>
-
-    <div class="illustration">
-      <img src="translate-banner.png" alt="Illustration" />
-    </div>
-
-    <div class="ads">
-      <!-- AdSense Placeholder -->
-      <p>Ad goes here</p>
-    </div>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Bolo Translate. All rights reserved.</p>
-  </footer>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Bolo Translate</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
 </html>
